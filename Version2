@@ -1,0 +1,25 @@
+let boardSize = 400;
+let sqCount = 8;
+let color1 = '#000000';
+let color2 = '#FF0000';
+
+function setup() {
+  createCanvas(600, 600);
+  noStroke();
+}
+
+function draw() {
+  background(220);
+
+  for (let col = 0; col < 10; col++) {
+    for (let row = 0; row < 10; row++) {
+
+      if (col % 2 == 0 & row % 2 == 1 || col % 2 == 1 & row % 2 == 0) {
+        fill('#CFB53B');
+      } else {
+        fill('Black');
+      }
+      rect(col * width / 10, row * height / 10, width / 10, height / 10);
+    }
+  }
+}
